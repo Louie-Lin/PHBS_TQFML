@@ -15,7 +15,7 @@ Credit card default is commonly problem and how to it will influenced the banksâ
 * __Model Training__: Use the in-sample data to train and validate the model, I may use perception, logistic regression, SVM, decision tree and combine different models for ensemble learning to improve the performance.
 * __Improvement__: Try to use PCA or LDA and redo the step of __Model training__.
 * __Visualization__: Do some visualization for the outcome.
-* __Evaluation__: Evaluate the clarification model by confusion metric and so on.
+* __Evaluation__: Evaluate the prediction model by confusion metric and so on.
 
 ## Dataset description
 
