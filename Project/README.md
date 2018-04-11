@@ -51,8 +51,8 @@ Credit card default is commonly problem and how to it will influenced the banksâ
     * __PAY_AMT5__:	Amount of previous payment in May, 2005 (NT dollar)
     * __PAY_AMT6__:	Amount of previous payment in April, 2005 (NT dollar)
 
-  * __Default or not next month__
-    * __default payment next month__:	Default payment (1=yes, 0=no)
+  * __Default or not.next month__
+    * __default.payment.next.month__:	Default payment (1=yes, 0=no)
 
 
 
