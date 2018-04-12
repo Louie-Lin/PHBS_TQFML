@@ -3,13 +3,11 @@
 ## Lin Liuyu 1701213060
 
 ## Project Description
-
-Credit card default is commonly problem and how to it will influenced the banks’ Rate of Bad Account, so it is important for the bank to make a good decision whether or not continue to provide a credit line to a person. This project is to analyze the dataset which contains some information of the historical behavior of people and try to get out a prediction model to figure out whether or not one person will default next month.
-
+The turn over of employee is what the employer concern. This project is to establish a model to predict whether employees will quit from a given record of factors affecting employee turnover.
 ## Project process
 
 * __Data analysis__: Do some statistical analysis on the data as well as visualize the data to get the intuitively idea that which feature may be useful to clarify these two kinds of people. For example, we can see the distribution of different features in these two kinds of people. 
-*	__Data processing__: Deal with the __NA__ data. Consider about delete some data that is meaningless and only a small fraction of the whole data. For example, in feature __‘EDUCATION’__, the data of type __4, 5, 6__ (which mean ‘others’ or ‘unknown’) is only 1.5% of the whole data, which do not means the higher level of education and will lead to bias when predict by this feature and we should drop it out without too much information loss.
+*	__Data processing__: Deal with the na data. Change some categorical data into dummie variables or continuous variable.
 * __Feature construction__: Try to build some new features by the raw data to describe the behavior of this person more specific.
 * __Data Split__:Spilt the data into training data and test data randomly.
 * __Model Training__: Use the in-sample data to train and validate the model, I may use perception, logistic regression, SVM, decision tree and combine different models for ensemble learning to improve the performance.
@@ -19,40 +17,43 @@ Credit card default is commonly problem and how to it will influenced the banks�
 
 ## Dataset description
 
-* __Dataset source__: [https://www.kaggle.com/uciml/default-of-credit-card-clients-dataset](https://www.kaggle.com/uciml/default-of-credit-card-clients-dataset) 
-* __Dataset Information__: This dataset contains information on default payments, demographic factors, credit data, history of payment, and bill statements of credit card clients in Taiwan from April 2005 to September 2005.
+* __Dataset source__: [http://www.dcjingsai.com/common/cmpt/%e5%91%98%e5%b7%a5%e7%a6%bb%e8%81%8c%e9%a2%84%e6%b5%8b%e8%ae%ad%e7%bb%83%e8%b5%9b_%e8%b5%9b%e4%bd%93%e4%b8%8e%e6%95%b0%e6%8d%ae.html](http://www.dcjingsai.com/common/cmpt/%e5%91%98%e5%b7%a5%e7%a6%bb%e8%81%8c%e9%a2%84%e6%b5%8b%e8%ae%ad%e7%bb%83%e8%b5%9b_%e8%b5%9b%e4%bd%93%e4%b8%8e%e6%95%b0%e6%8d%ae.html) 
+* __Dataset Information__: The data mainly include factors that affect employee turnover (salary, business travel, job satisfaction, work input, overtime, promotion, salary increase, etc.) And the corresponding record of employee turnover. The data is divided into training data and test data, which are stored in two files of pfm_train.csv and pfm_test.csv, respectively. The training data mainly consist of 1100 records and 31 fields. 
 * __Data Variables__:
-  * __User information__
-    * __ID__: ID of each client
-    * __LIMIT_BAL__: Amount of given credit in NT dollars (includes individual and family/supplementary credit)
+  * **Influence factor**
+    * **Age:** Employee’s age
+    * **Businesstravel:**	Business travel frequency, non-travel doesn't travel, travel_rarely says she doesn't travel much, travel_frequently says she travels frequently.
+    * **Department:**	The department of employees, sales means sales department, research & development indicates r & d department, human resources indicates human resources department.
+    * **Distancefromhome:**	The distance between a company and its home address. Range from 1 to 29, 1 is the nearest, and 29 represents the farthest.
+    *  **Education:**	The education level of employees is from 1 to 5, and 5 indicates the highest level of education.
+    *  **Educationfield:** The field of professional learning by employees, life sciences for life science, medical for medical treatment, marketing for marketing, technical degree as a technology degree, human resources for human resources, and other for others.
+    *  **Employeenumber:** Employee number
+    * **Environmentsatisfaction:**	The satisfaction degree of employees to work environment. Range from 1 to 4, 1 is the lowest, and 4 is the highest.
+    * **Gender:**	The gender of employees, male means men, female means women.
+    * **Jobinvolvement:**	Employees' work engagement. Range from 1 to 4, 1 is the lowest investment level, and 4 is the highest investment level.
+    * **Joblevel:**	Occupation level. Range from 1 to 5, 1 for the lowest level, 5 for the highest level.
+    * **Jobrole:** Sales executive is a sales director, research scientist is a science researcher, laboratory technician laboratory technician, manufacturing director is the manufacturing director, healthcare representative is a medical representative, manager is a sales representative. Ector is the research director and human resources is human resources.
+    * **Jobsatisfaction:** Job satisfaction is from 1 to 4, 1 represents the lowest degree of satisfaction, 4 represents the highest degree of satisfaction.
+    * **Maritalstatus:** Employee's marital status, single represents singleton, married represents married, divorced represents divorce.
+    * **Monthlyincome:** Employees' monthly income ranges from 1009 to 19999.
+    * **Numcompaniesworked:**	The number of companies that employees once worked for.
+    * **Over18:**	Is the age more than 18 years old
+    * **Overtime:**	Overtime, yes means overtime, no doesn't work overtime.
+    * **Percentsalaryhike:** The percentage of wage increase.
+    * **Performancerating:** Performance evaluation;
+    * **Relationshipsatisfaction:**	Relationship satisfaction. Range from 1 to 4, 1 shows the lowest degree of satisfaction, 4 expresses the highest satisfaction.
+    * **Standardhours:** Standard working hours;
+    * **Stockoptionlevel:**	The level of stock options;
+    * **Totalworkingyears:** Total work age;
+    * **Trainingtimeslastyear:** Training time last year, from 0 to 6, 0 indicated no training, 6 showed the longest training time.
+    * **Worklifebalance:** The balance between work and life. Range from 1 to 4, 1 indicates the lowest degree of balance, 4 indicates the highest degree of balance.
+    * **Yearsatcompany:**	The number of years worked in the company.
+    * **Yearsincurrentrole:**	The number of years of work at present.
+    * **Yearssincelastpromotion:** The time from the last promotion.
+    * **Yearswithcurrmanager:**	The number of years worked with the current managers.
 
-    * __SEX	Gender__: (1=male, 2=female)
-    * __EDUCATION__: (1=graduate school, 2=university, 3=high school, 4=others, 5=unknown, 6=unknown)
-    * __MARRIAGE__:	Marital status (1=married, 2=single, 3=others)
-    * __AGE__: Age in years
-
-  * __User beahavior__
-    * __PAY_0__:	Repayment status in September, 2005 (-1=pay duly, 1=payment delay for one month, 2=payment delay for two months, ... 8=payment delay for eight months, 9=payment delay for nine months and above)
-    * __PAY_2__:	Repayment status in August, 2005 (scale same as above)
-    * __PAY_3__:	Repayment status in July, 2005 (scale same as above)
-    * __PAY_4__:	Repayment status in June, 2005 (scale same as above)
-    * __PAY_5__:	Repayment status in May, 2005 (scale same as above)
-    * __PAY_6__:	Repayment status in April, 2005 (scale same as above)
-    * __BILL_AMT1__:	Amount of bill statement in September, 2005 (NT dollar)
-    * __BILL_AMT2__:	Amount of bill statement in August, 2005 (NT dollar)
-    * __BILL_AMT3__:	Amount of bill statement in July, 2005 (NT dollar)
-    * __BILL_AMT4__:	Amount of bill statement in June, 2005 (NT dollar)
-    * __BILL_AMT5__:	Amount of bill statement in May, 2005 (NT dollar)
-    * __BILL_AMT6__:	Amount of bill statement in April, 2005 (NT dollar)
-    * __PAY_AMT1__:	Amount of previous payment in September, 2005 (NT dollar)
-    * __PAY_AMT2__:	Amount of previous payment in August, 2005 (NT dollar)
-    * __PAY_AMT3__:	Amount of previous payment in July, 2005 (NT dollar)
-    * __PAY_AMT4__:	Amount of previous payment in June, 2005 (NT dollar)
-    * __PAY_AMT5__:	Amount of previous payment in May, 2005 (NT dollar)
-    * __PAY_AMT6__:	Amount of previous payment in April, 2005 (NT dollar)
-
-  * __Default or not.next month__
-    * __default.payment.next.month__:	Default payment (1=yes, 0=no)
+  * **Whether or not turnover**
+    * **Attrition:** Whether employees have left, 1 said they have left, and 2 said they did not quit.
 
 
 
