@@ -12,8 +12,12 @@ The turn over of employee is what the employer concern. This project is to estab
 
 ## 1.Data Vistualization
 In the part, we will show the distribution of some features in these two kinds of employee.
+ <div align="center">
+<img width="300" height="200" src="https://github.com/Louie-Lin/PHBS_TQFML/blob/master/Project/data_visual1.jpg"/>
+<img width="300" height="200" src="https://github.com/Louie-Lin/PHBS_TQFML/blob/master/Project/data_visual2.jpg"/>
+<img width="300" height="200" src="https://github.com/Louie-Lin/PHBS_TQFML/blob/master/Project/data_visual3.jpg"/>
+ </div>
 
-<img width="512" height="256" src="https://github.com/Louie-Lin/PHBS_TQFML/blob/master/Project/tree.png"/>
 
 * __Intuitive idea__: 
 It seems that the younger or low salaries employees and those employees who usually work overtime have higher probability to quit.
