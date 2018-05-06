@@ -52,7 +52,7 @@ It seems that the younger or low salaries employees and those employees who usua
    In this part, we train by __Logistic regression, SVM, K_Means, Decision Tree__ and find the best parameter of the model by accuracy.
    
  <div align="center">
-<img width="512" height="256" src="https://github.com/Louie-Lin/PHBS_TQFML/blob/master/Project/ROC1.jpg"/>
+<img width="512" height="512" src="https://github.com/Louie-Lin/PHBS_TQFML/blob/master/Project/ROC1.jpg"/>
  </div>
  
 This is the ROC curve of four classifiers. The K_means perform well, its accuracy is more than 80%. The linear classfiers like Logistic regression, SVM perform badly, their accuracy is about 70%.
@@ -89,10 +89,10 @@ In this part, we use __rbf Kernel PCA__ to map the data from low dimention into 
  These are the 
   * __4.4 Test model stability by k-fold__
  <div align="center">
-<img width="256" height="256" src="https://github.com/Louie-Lin/PHBS_TQFML/blob/master/Project/k_fold.jpg"/>
+<img width="512" height="256" src="https://github.com/Louie-Lin/PHBS_TQFML/blob/master/Project/k_fold.jpg"/>
  </div>  
  
   * __4.5 Draw the ROC curve__
  <div align="center">
-<img width="256" height="256" src="https://github.com/Louie-Lin/PHBS_TQFML/blob/master/Project/ROC2.jpg"/>
+<img width="512" height="512" src="https://github.com/Louie-Lin/PHBS_TQFML/blob/master/Project/ROC2.jpg"/>
  </div>  
