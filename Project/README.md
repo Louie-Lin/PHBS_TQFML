@@ -32,7 +32,7 @@ It seems that the younger or low salaries employees and those employees who usua
 
    * __3.1 Deal with imbalance data__
  <div align="center">
-<img width="512" height="256" src="https://github.com/Louie-Lin/PHBS_TQFML/blob/master/Project/data_visual1.jpg"/>
+<img width="512" height="256" src="https://github.com/Louie-Lin/PHBS_TQFML/blob/master/Project/imbalance.jpg"/>
  </div>
     This is the number of two types people in the samples. 
     
@@ -42,7 +42,7 @@ It seems that the younger or low salaries employees and those employees who usua
    * __3.3 Standardize the features__
    * __3.4 Do the PCA__
  <div align="center">
-<img width="512" height="256" src="https://github.com/Louie-Lin/PHBS_TQFML/blob/master/Project/data_visual1.jpg"/>
+<img width="512" height="256" src="https://github.com/Louie-Lin/PHBS_TQFML/blob/master/Project/PCA.jpg"/>
  </div>
  
    We select 20 components to reach 90% of variance contribution.
