@@ -5,6 +5,9 @@
 ## Project Description
 The turn over of employee is what the employer concern. This project is to establish a model to predict whether employees will quit from a given record of factors affecting employee turnover.
 
+You can see the process of proposal more clearly from the code:
+
+[https://github.com/Louie-Lin/PHBS_TQFML/blob/master/Project/project%20predict%20turnover.ipynb](https://github.com/Louie-Lin/PHBS_TQFML/blob/master/Project/project%20predict%20turnover.ipynb) 
 ## Dataset description
 
 * __Dataset source__: [http://www.dcjingsai.com/common/cmpt/%e5%91%98%e5%b7%a5%e7%a6%bb%e8%81%8c%e9%a2%84%e6%b5%8b%e8%ae%ad%e7%bb%83%e8%b5%9b_%e8%b5%9b%e4%bd%93%e4%b8%8e%e6%95%b0%e6%8d%ae.html](http://www.dcjingsai.com/common/cmpt/%e5%91%98%e5%b7%a5%e7%a6%bb%e8%81%8c%e9%a2%84%e6%b5%8b%e8%ae%ad%e7%bb%83%e8%b5%9b_%e8%b5%9b%e4%bd%93%e4%b8%8e%e6%95%b0%e6%8d%ae.html) 
