@@ -32,24 +32,26 @@ It seems that the younger or low salaries employees and those employees who usua
 
    * __3.1 Deal with imbalance data__
  <div align="center">
-<img width="512" height="256" src="https://github.com/Louie-Lin/PHBS_TQFML/blob/master/Project/data_visual1.jpg"/>
+<img width="512" height="256" src="https://github.com/Louie-Lin/PHBS_TQFML/blob/master/Project/imbalance.jpg"/>
  </div>
-    This is the number of two types people in the samples. 
+ 
+This is the number of two types people in the samples. 
     
-    The target of the model training is to find a model which can predict whether the employee will quit. The most important thing is to figure out who will quit correctly so that the employer can have enough time to hire someone else to take his job and low down the cost. So it is necessary for us to solve the imbalanced data problem before we train model. We use __resampling method__ to solve this problem.
+The target of the model training is to find a model which can predict whether the employee will quit. The most important thing is to figure out who will quit correctly so that the employer can have enough time to hire someone else to take his job and low down the cost. So it is necessary for us to solve the imbalanced data problem before we train model. We use __resampling method__ to solve this problem.
    
    * __3.2 Data split__
    * __3.3 Standardize the features__
    * __3.4 Do the PCA__
- <div align="center">
-<img width="512" height="256" src="https://github.com/Louie-Lin/PHBS_TQFML/blob/master/Project/data_visual1.jpg"/>
- </div>
- 
-   We select 20 components to reach 90% of variance contribution.
    
+We select 20 components to reach 90% of variance contribution.
+   
+ <div align="center">
+<img width="512" height="256" src="https://github.com/Louie-Lin/PHBS_TQFML/blob/master/Project/PCA.jpg"/>
+ </div>
+  
    * __3.5 Model training__
    
-   In this part, we train by __Logistic regression, SVM, K_Means, Decision Tree__ and find the best parameter of the model by accuracy.
+In this part, we train by __Logistic regression, SVM, K_Means, Decision Tree__ and find the best parameter of the model by accuracy.
    
  <div align="center">
 <img width="400" height="400" src="https://github.com/Louie-Lin/PHBS_TQFML/blob/master/Project/ROC1.jpg"/>
@@ -69,11 +71,12 @@ In this part we take Logistic Regression as an example to show the disadvantage 
 <img width="512" height="256" src="https://github.com/Louie-Lin/PHBS_TQFML/blob/master/Project/PCA example.jpg"/>
  </div>
 
-This fiture is the classification results of Logistic regression in PC1, PC2. We can see that the PCA does not seperate the data linearly. So it is the main reason that why SVM, Logistic Regression will perform bad in training.
+This figure is the classification results of Logistic regression in PC1, PC2. We can see that the PCA does not seperate the data linearly. So it is the main reason that why SVM, Logistic Regression will perform bad in training.
 
   * __4.2 Do the Kernel PCA to seperate the data in high dimention__
   
-In this part, we use __rbf Kernel PCA__ to map the data from low dimention into high dimention.
+In this part, we use __rbf Kernel PCA__ to map the data from low dimention into high dimention in order to seperate the data linearly in high dimention space.
+
   * __4.3 Test model by fitting the data after Kernel PCA__
 
 <div align="center">
@@ -86,8 +89,12 @@ In this part, we use __rbf Kernel PCA__ to map the data from low dimention into 
 <img width="256" height="256" src="https://github.com/Louie-Lin/PHBS_TQFML/blob/master/Project/impove4.jpg"/>
 </div>
  
- These are the 
+These are the accuracy of 4 classfiers by fitting different number of features. We can see that the more the fetures we take the more accuracy the linear classifier SVM, Logistic Regression can reach. Other classifier like knn is not so good more than 700 features. Thus we take 400 components after Kernel PCA to train the best model.
+ 
   * __4.4 Test model stability by k-fold__
+  
+In this part we will test the stability of model by k-fold method and the following picture is the outcome. And we can see that all classifier perform stable.
+  
  <div align="center">
 <img width="600" height="200" src="https://github.com/Louie-Lin/PHBS_TQFML/blob/master/Project/k_fold.jpg"/>
  </div>  
@@ -96,3 +103,8 @@ In this part, we use __rbf Kernel PCA__ to map the data from low dimention into 
  <div align="center">
 <img width="400" height="400" src="https://github.com/Louie-Lin/PHBS_TQFML/blob/master/Project/ROC2.jpg"/>
  </div>  
+ 
+This is the ROC curve of four classifiers by fitting the high dimensional data. As we can see, all classifier perform well.
+
+## Shortcoming
+Although we get a good model by mapping the data to high dimention space, the shortcoming of this method is that its time cost is too large when the original features is large enough. 
