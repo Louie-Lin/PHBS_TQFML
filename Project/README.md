@@ -84,7 +84,7 @@ In this part, we use __rbf Kernel PCA__ to map the data from low dimention into 
 
 <div align="center">
 <img width="256" height="256" src="https://github.com/Louie-Lin/PHBS_TQFML/blob/master/Project/impove1.jpg"/>
-<img width="256" height="256" src="https://github.com/Louie-Lin/PHBS_TQFML/blob/master/Project/impove1.jpg"/>
+<img width="256" height="256" src="https://github.com/Louie-Lin/PHBS_TQFML/blob/master/Project/impove2.jpg"/>
 </div>
  
 <div align="center">
